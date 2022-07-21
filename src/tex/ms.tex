@@ -235,7 +235,7 @@ Alongside these confidence intervals, it is typically most accurate to give the 
 When reporting these quantiles of interest, we should assess how much precision we prescribe to them, which is typically achieved by defining some Monte Carlo standard error (MCSE) \cite{vehtari_rank_2021}. 
 This is the variance that would be observed should the sampling process be repeated. 
 Theres a range of approaches to compute the MCSE, including the \texttt{mcse} method from the \texttt{ArviZ} package \cite{kumar_arviz_2019}.
-It is important to check that the MCSE is low enough to report the level of precision desired for a given parameter. 
+It is important to check that the MCSE is small enough to report the level of precision desired for a given parameter. 
 
 Regardless of how the chain is shared, as a component of a fully reproducible analysis, the author should give details of the software packages, scripts, and data used to produce the analysis and any random number seeds that were defined. 
 This means that if the chain is not available, the reader can rerun the sampling and replicate the results. 
