@@ -1,5 +1,5 @@
 % Define document class
-\documentclass[reprint,superscriptaddress,aps,amsmath,linenumbers]{revtex4-2}
+\documentclass[reprint,superscriptaddress,aps,amsmath]{revtex4-2}
 
 \usepackage{showyourwork}
 \usepackage{graphicx}
@@ -233,7 +233,7 @@ If it is not possible to describe the $m$-dimensional distribution using some st
 Where these are used the percentage of the confidence interval must be defined alongside it. 
 Alongside these confidence intervals, it is typically most accurate to give the maximum probability value for the parameter, rather than the numerical mean which may sit in a region of low probability.
 When reporting these quantiles of interest, we should assess how much precision we prescribe to them, which is typically achieved by defining some Monte Carlo standard error (MCSE) \cite{vehtari_rank_2021}. 
-This is the variance that would be observed should the sampling process be repeated. 
+This is the variability that would be observed should the sampling process be repeated. 
 Theres a range of approaches to compute the MCSE, including the \texttt{mcse} method from the \texttt{ArviZ} package \cite{kumar_arviz_2019}.
 It is important to check that the MCSE is small enough to report the level of precision desired for a given parameter. 
 
