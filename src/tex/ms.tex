@@ -70,7 +70,7 @@ However, as a result of the ``phase problem'', the analysis of these techniques 
 This has led to the use of Bayesian analysis, where some prior understanding of the system is used to aid our understanding of some reflectivity profile \cite{sivia_analysis_1991,geoghegan_experimental_1996,sivia_bayesian_1998}.
 Recently, developments in the availability of computer software for reflectometry analysis that include Bayesian functionality, such as Refl1d, refnx, anaklasis, and RasCAL \cite{kienzle_refl1d_2021,nelson_refnx_2019,koutsioubas_anaklasis_2021,hughes_rascal_2019}, which implement sampling methods from bumps, emcee, and dynesty \cite{kienzle_bumps_2021,foremanmackey_emcee_2019,speagle_dynesty_2020}, have led to an increase in the utilisation of Bayesian methods by the reflectometry community \cite{mccluskey_bayesian_2019,mccluskey_general_2020}.
 
-The discussion in this work will focus on the best practice for reporting the results from Bayesian and sampling-based analysis of neutron and X-ray reflectivity data. 
+This work will focus on the best practice for reporting the results from Bayesian and sampling-based analysis of neutron and X-ray reflectivity data. 
 This work will not introduce Bayesian or sampling methods for neutron and X-ray reflectometry analysis. For those unfamiliar with these techniques, we suggest the work of Sivia and co-workers \cite{sivia_bayesian_1998,sivia_data_2006} and more recent work focusing on reflectometry analysis \cite{hughes_physical_2019,mccluskey_general_2020,nelson_refnx_2019,aboljadayel_determining_2021}. 
 We hope that this work will inform best practices in data sharing from reflectometry analysis and inspire software developers to enable these to be accessed easily by the user. 
 
@@ -91,20 +91,20 @@ Under an assumption of normally distributed residuals $R(q) - R(q)_{\text{m}} \s
 \end{equation}
 %
 The input for this refinement process is the model and some initial parameter values, which may be an absolute value or some parameter range, depending on the refinement algorithm. 
-% ARJN the output of a Bayesian modelling process is a probability distribution for x. If everything is nice these will be Normally distributed, but not necessarily. We then report some statistical measure, e.g. mode/mean/median.
+% ARJN the output of a Bayesian modelling process is a probability distribution for x. If everything is nice these will be Normally distributed, but not necessarily. We then report some statistical measures, e.g. mode/mean/median.
 The output is a set of values for $\mathbf{x}$, potentially with associated error bars, where these are present they typically describe a standard deviation from the mean of a Gaussian probability distribution. 
 % ARJN Perhaps a Bayesian modelling process can deal with inaccurate reporting of uncertainties, e.g. some factor that accounts for error bars that are statistically underestimated.
 This process implicitly assumes that the data is completely reduced, accounting for all experimental parameters, uncertainties are accurately described and the model can accurately describe the data. 
 
 The input required depends on a minimisation algorithm being used, with some algorithms requiring a single starting guess (such as traditional Newtonian methods) and others taking a range of potential values (more common in stochastic approaches, like differential evolution). 
-The nature of these inputs define the results of the analysis, therefore it is of the utmost importance that these are shared as part of a publication describing the work. 
+The nature of these inputs defines the results of the analysis, therefore it is of the utmost importance that these are shared as part of a publication describing the work. 
 Furthermore, the minimisation is often performed with bounds in place, defining that the parameter values will lie within a given range. 
 This range can be thought of as having a prior probability distribution, $p(\mathbf{x})$, where values of $\mathbf{x}$ outside of this range have a probability of \num{0}. 
 Even when a non-Bayesian approach is used in the analysis (i.e. Bayes theorem is not utilised), the result where bounds are set would be analogous to a Bayesian analysis with a uniform prior probability. 
 
 The optimised parameters from the minimisation algorithm, which depend on the particular algorithm, often include some statistical uncertainty. 
-% ARJN, parameters uncertainties only assumed to be normally distributed for gradient based minimizers. Bayesian analyses don't assume any form of statistical distribution.
-% Provide reference  for how statistical uncertainties are found, e.g. the appropriate place in Bevington.
+% ARJN, parameters uncertainties only assumed to be normally distributed for gradient-based minimizers. Bayesian analyses don't assume any form of statistical distribution.
+% Provide a reference for how statistical uncertainties are found, e.g. the appropriate place in Bevington.
 How these statistical uncertainties are found is beyond the scope of this work, but it is important to acknowledge that this uncertainty typically assumes that the probability distribution of the parameter is Gaussian in nature. 
 This probability distribution is either the partial likelihood or posterior, the latter when some prior is included and Bayes theorem is applied. The posterior describes our understanding of the parameter values given the data that was measured.
 When Bayesian modelling is used and the prior is included, the posterior probability is found as, 
@@ -124,8 +124,7 @@ Furthermore, uptake of the approaches discussed herein will lead to greater clar
 \section{Prior}
 \label{sec:prior}
 
-% ARJN Application of a half-closed distribution may be as common? e.g. [0, inf] for a parameter that is known to be non-negative. Should we mention this in table 1?
-The most common probability distribution that is used for a prior is uniform between a lower and upper bound.
+The most common probability distributions that are used for a prior are uniform between a lower and upper bound or a half-closed interval, where only a lower or upper bound is defined.
 The use of a bounded parameter along with some traditional $\chi^2$-minimisation method and a parameter with a uniform prior and a Bayesian maximum \emph{a-posteriori} approach will lead to the same result. 
 For priors that are uniform is it important that the upper and lower bounds are reported, this can be achieved with a simple table  (see Table~\ref{tab:bounds} for an example) to be included in the article or supplementary information. 
 %
@@ -140,7 +139,7 @@ For priors that are uniform is it important that the upper and lower bounds are 
         $d_t$/\si{\angstrom} & $21.0$ & $[10.0, 26.0)$\\
         $\phi_t$ & $1.0$ & $[0.5, 1.0)$\\
         $V_t$/\si{\angstrom^3} & $850.4$ & $[800.0, 1000.0)$\\
-        $\sigma$/\si{\angstrom} & $2.9$ & $[2.9, 5.0)$\\
+        $\sigma$/\si{\angstrom} & $2.9$ & $[2.9, \infty)$\\
     \end{tabular}
 \end{table}
 %
@@ -243,6 +242,10 @@ For example, the three parameters in Figure~\ref{fig:post} pass this statistical
 If it is not possible to describe the $m$-dimensional distribution using some statistical test and a common distribution type, then confidence intervals can be given. 
 Where these are used the percentage of the confidence interval must be defined alongside it. 
 Alongside these confidence intervals, it is typically most accurate to give the maximum probability value for the parameter, rather than the numerical mean which may sit in a region of low probability.
+When reporting these quantiles of interest, we should assess how much precision we prescribe to them, which is typically achieved by defining some Monte Carlo standard error (MCSE) \cite{vehtari_rank_2021}. 
+This is the variance that would be observed should the sampling process be repeated. 
+Theres a range of approaches to compute the MCSE, including the \texttt{mcse} method from the \texttt{ArviZ} package \cite{kumar_arviz_2019}.
+It is important to check that the MCSE is low enough to report the level of precision desired for a given parameter. 
 
 Regardless of how the chain is shared, as a component of a fully reproducible analysis, the author should give details of the software packages, scripts, and data used to produce the analysis and any random number seeds that were defined. 
 This means that if the chain is not available, the reader can rerun the sampling and replicate the results. 
@@ -258,7 +261,7 @@ We mentioned the importance of including the specific likelihood function used i
 Additionally, we described how best to present the results from our Bayesian analysis in a clear and precise fashion, including the importance of statistical tests and confidence intervals in reporting.
 We hope that this advice will be taken on by the reflectometry community and in future, there will be greater consistency and clarity in the reporting of results from Bayesian methods.
 Furthermore, we hope that developers of analysis software will take this work as a call to arms to include these best practices as easy-to-access methods in their software.
-Finally, if results of neutron and X-ray Bayesian analysis is shared as outlined in this work, then the analysis will be both reproducible and comprehensible.
+Finally, if the results of neutron and X-ray Bayesian analysis are shared as outlined in this work, then the analysis will be both reproducible and comprehensible.
 
 \section*{Data availability}
 
