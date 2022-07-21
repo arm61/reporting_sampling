@@ -126,6 +126,7 @@ Furthermore, uptake of the approaches discussed herein will lead to greater clar
 The most common probability distributions that are used for a prior are uniform between a lower and upper bound or a half-closed interval, where only a lower or upper bound is defined.
 The use of a bounded parameter along with some traditional $\chi^2$-minimisation method and a parameter with a uniform prior and a Bayesian maximum \emph{a-posteriori} approach will lead to the same result. 
 For priors that are uniform is it important that the upper and lower bounds are reported, this can be achieved with a simple table  (see Table~\ref{tab:bounds} for an example) to be included in the article or supplementary information. 
+Note, that this table also gives information of ``constrained'' values, where in some analysis parameters were not allowed to vary, these constrained values can have a significant impact on the result of any analysis and therefore must also be given.
 %
 \begin{table}
     \caption{An example of the presenting uniform priors in a tabular format. Reproduced from \cite{mccluskey_general_2020}, where each parameter was either constrained to a given value or sampled within the prior range.}
@@ -208,7 +209,8 @@ Either the full posterior chain or the thinned chain should be shared along with
 This will allow the best replication and verification of any results obtained from the data. 
 Furthermore, large output files such as these chains can be easily shared using some versioned data repository, such as Zenodo or those available at specific institutions. 
 Additionally, to allow the reader to quickly interpret the sampled posterior, a graphical description (such as that in Figure~\ref{fig:post}) should be included, at a minimum, in the supplementary information of the work. 
-The importance of presenting the full posterior graphically lies in the ability to easily interpret correlations between parameters through this medium. 
+The importance of presenting the full posterior graphically lies in the ability to easily interpret correlations between parameters through this medium.
+For example, in Figure 3, the ellipsoidal probability distribution (for the d/rho) parameters indicates correlation.
 %
 \begin{figure}
   \script{post.py}
