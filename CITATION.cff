@@ -1,0 +1,102 @@
+cff-version: 1.2.0
+message: "If you make use of the results in this paper, please cite it as below."
+authors:
+  - affiliation: "European Spallation Source ERIC"
+    family-names: McCluskey
+    given-names: "Andrew R."
+    orcid: "https://orcid.org/0000-0003-3381-5911"
+  - affiliation: "ISIS-Neutron and Muon Source"
+    family-names: Caruana
+    given-names: "Andrew J."
+    orcid: "https://orcid.org/0000-0003-0715-5876"
+  - affiliation: "ISIS-Neutron and Muon Source"
+    family-names: Kinane
+    given-names: "Christy J."
+    orcid: "https://orcid.org/0000-0002-1185-0719"
+  - affiliation: "ISIS-Neutron and Muon Source"
+    family-names: Armstrong
+    given-names: "Alexander J."
+    orcid: "https://orcid.org/0000-0002-6601-8591"
+  - affiliation: "European Spallation Source ERIC"
+    family-names: Arnold
+    given-names: "Tom"
+  - affiliation: "ISIS-Neutron and Muon Source"
+    family-names: Cooper
+    given-names: "Joshaniel F. K."
+  - affiliation: "Australian Nuclear Science and Technology Organisation"
+    family-names: Cortie
+    given-names: "David L."
+    orcid: "https://orcid.org/0000-0003-2383-1619"
+  - affiliation: "ISIS-Neutron and Muon Source"
+    family-names: Hughes
+    given-names: "Arwel V."
+  - affiliation: "German Engineering Material Science at Heinz Maier-Leibnitz Zentrum"
+    family-names: Moulin
+    given-names: "Jean François"
+    orcid: "https://orcid.org/0000-0003-2508-2607"
+  - affiliation: "Australian Nuclear Science and Technology Organisation"
+    family-names: Nelson
+    given-names: "Andrew R. J."
+    orcid: "https://orcid.org/0000-0002-4548-3558"
+  - affiliation: "European Spallation Source ERIC"
+    family-names: Potrzebowski
+    given-names: "Wojciech"
+    orcid: "https://orcid.org/0000-0002-7789-6779"
+  - affiliation: "Institute of Applied Physics, University of Tübingen"
+    family-names: Starostin
+    given-names: "Vladimir"
+title: "reporting_sampling"
+version: 0.0.1
+doi: "N/A"
+date-released: "2022-07-21"
+url: "https://github.com/arm61/reporting_sampling"
+preferred-citation:
+  type: misc
+  authors:
+    - affiliation: "European Spallation Source ERIC"
+      family-names: McCluskey
+      given-names: "Andrew R."
+      orcid: "https://orcid.org/0000-0003-3381-5911"
+    - affiliation: "ISIS-Neutron and Muon Source"
+      family-names: Caruana
+      given-names: "Andrew J."
+      orcid: "https://orcid.org/0000-0003-0715-5876"
+    - affiliation: "ISIS-Neutron and Muon Source"
+      family-names: Kinane
+      given-names: "Christy J."
+      orcid: "https://orcid.org/0000-0002-1185-0719"
+    - affiliation: "ISIS-Neutron and Muon Source"
+      family-names: Armstrong
+      given-names: "Alexander J."
+      orcid: "https://orcid.org/0000-0002-6601-8591"
+    - affiliation: "European Spallation Source ERIC"
+      family-names: Arnold
+      given-names: "Tom"
+    - affiliation: "ISIS-Neutron and Muon Source"
+      family-names: Cooper
+      given-names: "Joshaniel F. K."
+    - affiliation: "Australian Nuclear Science and Technology Organisation"
+      family-names: Cortie
+      given-names: "David L."
+      orcid: "https://orcid.org/0000-0003-2383-1619"
+    - affiliation: "ISIS-Neutron and Muon Source"
+      family-names: Hughes
+      given-names: "Arwel V."
+    - affiliation: "German Engineering Material Science at Heinz Maier-Leibnitz Zentrum"
+      family-names: Moulin
+      given-names: "Jean François"
+      orcid: "https://orcid.org/0000-0003-2508-2607"
+    - affiliation: "Australian Nuclear Science and Technology Organisation"
+      family-names: Nelson
+      given-names: "Andrew R. J."
+      orcid: "https://orcid.org/0000-0002-4548-3558"
+    - affiliation: "European Spallation Source ERIC"
+      family-names: Potrzebowski
+      given-names: "Wojciech"
+      orcid: "https://orcid.org/0000-0002-7789-6779"
+    - affiliation: "Institute of Applied Physics, University of Tübingen"
+      family-names: Starostin
+      given-names: "Vladimir"
+  eprint: "arxiv:"
+  title: "Accuracy and precision in diffusive properties for in-silico materials"
+  year: 2022
