@@ -1,8 +1,8 @@
 # Advice on describing Bayesian analysis of neutron and X-ray reflectometry
 
 <p align="center">
-<a href="https://doi.org/10.5281/zenodo.xxxxxxx">
-<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg"/>
+<a href="https://doi.org/10.5281/zenodo.6874560">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6874560.svg"/>
 </a>
 <a href="https://arxiv.org/abs/xxxx.xxxxx">
 <img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-orange.svg"/>
