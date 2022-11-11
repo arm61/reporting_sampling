@@ -80,6 +80,7 @@ A commonly used goodness-of-fit parameter is the $\chi^2$ parameter which is fou
 %
 \begin{equation}
     \chi^2 = \sum_{q=q_{\text{min}}}^{q_{\text{max}}}{\bigg[\frac{(R(q) - R(q)_{\text{m}})}{\sigma_R(q)}\bigg]^2}, 
+    \label{equ:chi2}
 \end{equation}
 %
 where, $R(q)$ and $R(q)_{\text{m}}$ are the measured and modelled reflectivity at a given $q$, the measured momentum transfer vector, and $\sigma_R(q)$ is the uncertainty associated with the measured reflectivity at each $q$ point. 
@@ -91,7 +92,7 @@ Under an assumption of normally distributed residuals $R(q) - R(q)_{\text{m}} \s
 \end{equation}
 %
 The input for this refinement process is the model and some initial parameter values, which may be an absolute value or some parameter range, depending on the refinement algorithm.
-While for some Bayesian sampling process, the input is a probability distribution for each parameter, known as the prior.
+While for Bayesian sampling processes, the input is a probability distribution for each parameter, known as the prior.
 The output is a set of values for $\mathbf{x}$, potentially with associated error bars, where these are present they typically describe a standard deviation from the mean of a Gaussian probability distribution. 
 A Bayesian sampling process gives a probability distribution, the posterior, the defines the relative likelihood of different values of each parameter, from this we can report statistical measures, e.g. mode/mean/median.
 This process implicitly assumes that the data is completely reduced, accounting for all experimental parameters, uncertainties are accurately described and the model can accurately describe the data. 
@@ -114,6 +115,7 @@ When Bayesian modelling is used and the prior is included, the posterior probabi
 \end{equation}
 %
 Therefore, when Bayesian modelling is performed, the priors and likelihood are of fundamental importance to the results that are obtained (the posterior), and any scientific conclusions that are drawn. 
+We note that Equation~\ref{equ:bayes} omits the normalisation term, the Bayesian evidence [$p(\mathbf{D})$], which is discussed in detail elsewhere \cite{sivia_bayesian_1998,mccluskey_general_2020} and can be omitted when model comparison is not begin performed. 
 
 The use of Bayesian inference can be valuable in the interpretation of reflectivity data, however, inconsistency in the description of the process will result in analysis that cannot be reproduced or easily understood. 
 This can range from not reporting the priors applied to each parameter (e.g. the lower/upper limits for a uniform distribution that applies box bounds), to failing to share the complete sampling chain of a Markov Chain Monte Carlo sampling, or details of any autocorrelation analysis (the last of which, the authors of this work admit to being guilty of \cite{mccluskey_bayesian_2019}). 
@@ -189,9 +191,11 @@ An example of this is shown in Figure~\ref{fig:samples}, where the prior probabi
 \label{sec:likelihood}
 
 Bayes theorem (given in Equation~\ref{equ:bayes}) consists of the product of the prior and the likelihood. 
-The former describes our current understanding of the parameters before we conduct some experiments, while the latter describes how well the data is described by the model parameters. 
-Therefore, we must state how the likelihood for a given model and data is calculated (giving the analysis package used, version number, and if not the default the likelihood option), in particular, because although Equation~\ref{equ:likelihood} is a common approach, it assumes a normally distributed uncertainty for a measured reflectivity value. 
-While a normally distributed uncertainty is the most common, it may not be accurate in all circumstances, for example, when low numbers of counts are present, a Poisson uncertainty may offer a more accurate description. 
+The former describes our current understanding of the parameters before we conduct some experiments, while the latter describes how well the data is described by the model parameters.
+Although Equation~\ref{equ:likelihood} is a common approach to quantify how well the data is described, it assumes a normally distributed uncertainty for the measured reflectivity value.
+While a normally distributed uncertainty is the most common, it may not be accurate in all circumstances, for example, when low numbers of counts are present, a Poisson uncertainty may offer a more accurate description, in which case the likelihood function could be changed to that which reflect multi-dimensional Poisson distribution \cite{lass_multinomial_2021}.
+Additionally, the likelihood function may be modified by weighting the data at high-$q$, such as by replacing $R(q)$ in Equation~\ref{equ:chi2} with $\log{[R(q)]}$ or $R(q)q^4$.
+These aspects make is very important to state explicity how the likelihood for a given model and data is calculated (giving the analysis package used, version number, and if not the default the likelihood option).
 
 \section{Posterior}
 \label{sec:posterior}
@@ -240,6 +244,8 @@ It is important to check that the MCSE is small enough to report the level of pr
 Regardless of how the chain is shared, as a component of a fully reproducible analysis, the author should give details of the software packages, scripts, and data used to produce the analysis and any random number seeds that were defined. 
 This means that if the chain is not available, the reader can rerun the sampling and replicate the results. 
 Included in this is information regarding specific version numbers for different software packages, as these can create irreplicable results between version numbers. 
+We want to emphasize this value of openly sharing the posteriors of some Bayesian sampling approach. 
+All posteriors may be utilised as prior probabilities in subsequent analyses, therefore by sharing posteriors we enable improved analysis in future. 
 
 \section{Conclusion}
 \label{sec:conclusions}
