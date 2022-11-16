@@ -46,7 +46,7 @@ authors:
     family-names: Starostin
     given-names: "Vladimir"
 title: "reporting_sampling"
-version: 0.0.1
+version: 0.0.2
 doi: "N/A"
 date-released: "2022-07-21"
 url: "https://github.com/arm61/reporting_sampling"
