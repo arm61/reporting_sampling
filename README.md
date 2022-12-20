@@ -18,7 +18,7 @@
 </a>
 </p>
 
-[Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Andrew J. Caruana](https://orcid.org/0000-0003-0715-5876), [Christy J. Kinane](https://orcid.org/0000-0002-1185-0719), [Alexander J. Armstrong](https://orcid.org/0000-0002-6601-8591), Tom Arnold, Joshaniel F. K. Cooper, [David L. Cortie](https://orcid.org/0000-0003-2383-1619), Arwel V. Hughes, [Jean-François Moulin](https://orcid.org/0000-0003-2508-2607), [Andrew R. J. Nelson](https://orcid.org/0000-0002-4548-3558), [Wojciech Potrzebowski](https://orcid.org/0000-0002-7789-6779), Vladimir Starostin
+[Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Andrew J. Caruana](https://orcid.org/0000-0003-0715-5876), [Christy J. Kinane](https://orcid.org/0000-0002-1185-0719), [Alexander J. Armstrong](https://orcid.org/0000-0002-6601-8591), [Thomas Arnold](https://orcid.org/0000-0001-8295-3822), [Joshaniel F. K. Cooper](https://orcid.org/0000-0002-4635-2381), [David L. Cortie](https://orcid.org/0000-0003-2383-1619), Arwel V. Hughes, [Jean-François Moulin](https://orcid.org/0000-0003-2508-2607), [Andrew R. J. Nelson](https://orcid.org/0000-0002-4548-3558), [Wojciech Potrzebowski](https://orcid.org/0000-0002-7789-6779), [Vladimir Starostin](https://orcid.org/0000-0003-4533-6256)
 
 &ast;[andrew.mccluskey@ess.eu](mailto:andrew.mccluskey@ess.eu)
 
