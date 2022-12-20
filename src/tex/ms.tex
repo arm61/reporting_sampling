@@ -31,7 +31,7 @@
   \affiliation{ISIS-Neutron and Muon Source, Rutherford Appleton Laboratory, Didcot, Oxon OX11 0QX, GB}
 \author{Alexander J. Armstrong}
   \affiliation{ISIS-Neutron and Muon Source, Rutherford Appleton Laboratory, Didcot, Oxon OX11 0QX, GB}
-\author{Tom Arnold}
+\author{Thomas Arnold}
   \affiliation{European Spallation Source ERIC, P.O. Box 176, SE-221 00, Lund, SE}
 \author{Joshaniel F. K. Cooper}
   \affiliation{ISIS-Neutron and Muon Source, Rutherford Appleton Laboratory, Didcot, Oxon OX11 0QX, GB}
@@ -82,7 +82,8 @@ A commonly used goodness-of-fit parameter is the $\chi^2$ parameter which is fou
     \label{equ:chi2}
 \end{equation}
 %
-where, $R(q)$ and $R{(q)}_{\text{m}}$ are the measured and modelled reflectivity at a given $q$, the measured momentum transfer vector, and $\sigma_R(q)$ is the uncertainty associated with the measured reflectivity at each $q$ point. 
+where $R(q)$ and $R(q)_m$ are the measured and modelled reflectivity at a given $q$, respectively, while $\sigma_{R}(q)$ is the uncertainty associated with the measured reflectivity at each $q$.
+Here, $q = (4\pi / \lambda)\sin{\theta}$ is the measured momentum transfer, where $\theta$ is half the scattering angle and $\lambda$ is the wavelength of the incident radiation.
 Under an assumption of normally distributed residuals $R(q) - R{(q)}_{\text{m}} \sim \mathcal{N}(0, \sigma_R(q))$, the likelihood is related to the $\chi^2$ variable in the following way:
 %
 \begin{equation}
@@ -252,7 +253,7 @@ Finally, if the results of neutron and X-ray Bayesian analysis are shared as out
 
 \section*{Data availability}
 
-Electronic Supplementary Information (ESI) available: All analysis/plotting scripts and data files allowing for a fully reproducible and automated analysis workflow, using \showyourwork~\cite{luger_showyourwork_2022,luger_mapping_2011}, for this work is available at \url{https://github.com/arm61/reporting_sampling} (DOI:\ 10.5281/zenodo.7326091) under an MIT license, while the paper is shared under a CC BY-SA 4.0 license~\cite{mccluskey_github_2022} and the data shown in Figure~\ref{fig:post} is also available under a CC BY-SA 4.0 license~\cite{caruana_zenodo_2022}.
+Electronic Supplementary Information (ESI) available: All analysis/plotting scripts and data files allowing for a fully reproducible and automated analysis workflow, using \showyourwork~\cite{luger_showyourwork_2022,luger_mapping_2011}, for this work is available at \url{https://github.com/arm61/reporting_sampling} (DOI:\ 10.5281/zenodo.6874559) under an MIT license, while the paper is shared under a CC BY-SA 4.0 license~\cite{mccluskey_github_2022} and the data shown in Figure~\ref{fig:post} is also available under a CC BY-SA 4.0 license~\cite{caruana_zenodo_2022}.
 
 \section*{CR\lowercase{e}d\lowercase{i}T author statement}\label{sec:credit}
 
